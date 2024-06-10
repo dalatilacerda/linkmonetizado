@@ -39,8 +39,33 @@
 <div class="container">
     <h1 style="color: white;">instapixdesafio</h1>
     <p class="description">Muito Obrigado por participar, aguarde até que o botão do seu link seja desbloqueado.</p>
-    <button class="btn">Desbloquear Botão</button>
+    <button class="btn" id="countdown">10</button>
 </div>
+
+<script>
+    // Função para iniciar o cronômetro
+    function startCountdown() {
+        var count = 10;
+        var button = document.getElementById('countdown');
+
+        var countdownInterval = setInterval(function() {
+            count--;
+            button.innerHTML = count;
+
+            if (count <= 0) {
+                clearInterval(countdownInterval);
+                button.innerHTML = 'Desbloquear Botão';
+                button.disabled = false; // Permitir que o botão seja clicado
+            }
+        }, 1000);
+    }
+
+    // Iniciar o cronômetro ao clicar no botão
+    document.getElementById('countdown').addEventListener('click', function() {
+        this.disabled = true; // Impedir múltiplos cliques
+        startCountdown();
+    });
+</script>
 
 </body>
 </html>
