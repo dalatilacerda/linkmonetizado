@@ -63,11 +63,10 @@
         }, 1000);
     }
 
-    // Iniciar o cronômetro ao clicar no botão
-    document.getElementById('countdown').addEventListener('click', function() {
-        this.disabled = true; // Impedir múltiplos cliques
+    // Iniciar o cronômetro assim que a página for carregada
+    window.onload = function() {
         startCountdown();
-    });
+    };
 </script>
 
 </body>
