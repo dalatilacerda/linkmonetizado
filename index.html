@@ -10,6 +10,8 @@
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0; /* Remover margens padrão */
+            padding: 0; /* Remover preenchimento padrão */
         }
         .container {
             padding: 20px;
@@ -35,18 +37,13 @@
         .advertisement {
             margin-top: 20px;
             font-size: 14px;
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-            padding-top: 56.25%; /* Proporção de 9:16 */
+            width: 100%;
+            height: 100vh; /* Para ocupar toda a altura da janela do navegador */
         }
         .advertisement iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            border: none; /* Para remover a borda do iframe */
         }
     </style>
 </head>
@@ -74,7 +71,7 @@
 
             if (count < 0) {
                 clearInterval(countdownInterval);
-                button.innerHTML = 'Acessar link 🔗';
+                button.innerHTML = 'Desbloquear Botão';
                 button.disabled = false; // Permitir que o botão seja clicado
                 button.onclick = function() {
                     window.location.href = 'https://instapixdesafio.blogspot.com/p/pag-de-comentarios.html?m=1';
