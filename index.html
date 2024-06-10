@@ -40,6 +40,7 @@
     <h1 style="color: white;">instapixdesafio</h1>
     <p class="description">Muito Obrigado por participar, aguarde até que o botão do seu link seja desbloqueado.</p>
     <button class="btn" id="countdown">10</button>
+    <p class="description">Publicidade</p>
 </div>
 
 <script>
@@ -54,7 +55,7 @@
 
             if (count < 0) {
                 clearInterval(countdownInterval);
-                button.innerHTML = 'Acessar link';
+                button.innerHTML = 'Desbloquear Botão';
                 button.disabled = false; // Permitir que o botão seja clicado
                 button.onclick = function() {
                     window.location.href = 'https://instapixdesafio.blogspot.com/p/pag-de-comentarios.html?m=1';
