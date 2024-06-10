@@ -56,6 +56,9 @@
                 clearInterval(countdownInterval);
                 button.innerHTML = 'Desbloquear Botão';
                 button.disabled = false; // Permitir que o botão seja clicado
+                button.onclick = function() {
+                    window.location.href = 'https://instapixdesafio.blogspot.com/p/pag-de-comentarios.html?m=1';
+                };
             }
         }, 1000);
     }
