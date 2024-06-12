@@ -23,9 +23,10 @@
     position: fixed;
     top: 60px;
     bottom: 0;
-    left: 0;
+    left: -200px; /* Escondido por padrão */
     padding-top: 20px;
     overflow-y: auto;
+    transition: left 0.3s ease; /* Transição suave ao mostrar/ocultar */
   }
   nav a {
     display: block;
@@ -38,8 +39,20 @@
     background-color: #444444;
   }
   main {
-    margin-left: 220px;
+    margin-left: 20px; /* Espaço para o menu lateral */
     padding: 20px;
+  }
+  .menu-btn {
+    background-color: #333333; /* cor do botão */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2; /* Para ficar acima do menu */
   }
 </style>
 </head>
@@ -47,9 +60,10 @@
 
 <header>
   <h1>Meu Site</h1>
+  <button class="menu-btn" onclick="toggleMenu()">Menu</button>
 </header>
 
-<nav>
+<nav id="menu">
   <a href="#">Categoria 1</a>
   <a href="#">Categoria 2</a>
   <a href="#">Categoria 3</a>
@@ -62,6 +76,17 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec enim at dolor accumsan facilisis. Integer nec tortor urna. Ut fermentum neque ac enim tincidunt, et cursus ex fermentum.</p>
   <p>...</p>
 </main>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.left === "-200px") {
+      menu.style.left = "0";
+    } else {
+      menu.style.left = "-200px";
+    }
+  }
+</script>
 
 </body>
 </html>
