@@ -56,6 +56,11 @@
     left: 10px;
     z-index: 2; /* Para ficar acima do menu */
   }
+  .btn-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
   .btn {
     background-color: #ffffff; /* branco */
     color: #000000; /* preto */
@@ -64,6 +69,7 @@
     margin-top: 10px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 20px; /* Cantos arredondados */
   }
 </style>
 </head>
@@ -86,10 +92,12 @@
   <p>Bem-vindo ao meu site! Aqui está o conteúdo principal...</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec enim at dolor accumsan facilisis. Integer nec tortor urna. Ut fermentum neque ac enim tincidunt, et cursus ex fermentum.</p>
   <p>...</p>
-  <!-- Botões adicionados -->
-  <button class="btn">Botão 1</button>
-  <button class="btn">Botão 2</button>
-  <button class="btn">Botão 3</button>
+  <!-- Botões ajustados -->
+  <ul class="btn-list">
+    <li><button class="btn">Botão 1</button></li>
+    <li><button class="btn">Botão 2</button></li>
+    <li><button class="btn">Botão 3</button></li>
+  </ul>
 </main>
 
 <script>
