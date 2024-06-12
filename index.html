@@ -3,21 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página com Fundo Preto e Texto Branco</title>
+<title>Meu Site</title>
 <style>
   body {
     background-color: #000000; /* preto */
     color: #ffffff; /* branco */
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333333; /* cinza escuro */
+    padding: 10px;
+    text-align: center;
+  }
+  nav {
+    background-color: #666666; /* cinza médio */
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    overflow-y: auto;
+  }
+  nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid #444444;
+  }
+  nav a:hover {
+    background-color: #444444;
+  }
+  main {
+    margin-left: 220px;
+    padding: 20px;
   }
 </style>
 </head>
 <body>
 
-<!-- Conteúdo da página aqui -->
-<h1>Título da Página</h1>
-<p>Este é um exemplo de página com fundo preto e texto branco.</p>
-<img src="caminho/para/sua/imagem.jpg" alt="Descrição da imagem">
+<header>
+  <h1>Meu Site</h1>
+</header>
+
+<nav>
+  <a href="#">Categoria 1</a>
+  <a href="#">Categoria 2</a>
+  <a href="#">Categoria 3</a>
+  <a href="#">Categoria 4</a>
+</nav>
+
+<main>
+  <h2>Conteúdo Principal</h2>
+  <p>Bem-vindo ao meu site! Aqui está o conteúdo principal...</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec enim at dolor accumsan facilisis. Integer nec tortor urna. Ut fermentum neque ac enim tincidunt, et cursus ex fermentum.</p>
+  <p>...</p>
+</main>
 
 </body>
 </html>
